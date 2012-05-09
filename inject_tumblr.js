@@ -34,7 +34,7 @@
       });
     }
 
-    enhance_post = function(post) {
+    var enhance_post = function(post) {
 
       post.date = new Date(parseInt(post.timestamp*1000));
       post.iso_date = post.date.toISOString();
