@@ -21,7 +21,7 @@
           });
         </script>
 
-1. Optional and recommended! Provide your own templates for rendering the output:
+1. Optional and recommended! Provide your own mustache templates for rendering the output:
 
         <script>
           jq('#tumblr').inject_tumblr({
