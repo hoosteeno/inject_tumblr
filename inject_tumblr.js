@@ -41,7 +41,7 @@
       post.human_date = post.date.toDateString();
       post.year = post.date.getFullYear();
     
-      if (options.post_type == 'text') {
+      if (post.type == 'text') {
         post.body = '<div>'+post.body+'</div>';
 
         post.first_picture = (function(){
@@ -55,7 +55,7 @@
         })();
       }
 
-      if (options.post_type == 'link') {
+      if (post.type == 'link') {
         post.body = '<div>'+post.description+'</div>';
         post.blurb = (function(){
           var blurb = document.createElement('div');
