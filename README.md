@@ -1,6 +1,6 @@
 # inject_tumblr
 
-## A jQuery plugin for getting some Tumblr posts and putting them on your site
+## A jQuery plugin for putting some Tumblr posts on your site
 
 ### Instructions and Caveats
 
