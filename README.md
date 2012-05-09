@@ -16,7 +16,7 @@
           jq('#tumblr').inject_tumblr({
             tumblr_id: 'theonlymagicleftisart',
             data: {
-              api_key: '3VCeCOG7JTnON9cxj8euDHyLHkMdQVy3tpG289S1IND6WhAv0A'
+              api_key: '3VCeCoG7JTnON_get_your_own_key_dude_WhAv0A'
             }
           });
         </script>
@@ -25,11 +25,11 @@
 
         <script>
           jq('#tumblr').inject_tumblr({
-            tumblr_id: 'scottjurek',
+            tumblr_id: 'theonlymagicleftisart',
             down_template: jq('script.template[name="tumblr-down-template"]').first().html(),
             post_template: jq('script.template[name="tumblr-post-template"]').first().html(),
             data: {
-              api_key: '3VCeCOG7JTnON9cxj8euDHyLHkMdQVy3tpG289S1IND6WhAv0A'
+              api_key: '3VCeCoG7JTnON_get_your_own_key_dude_WhAv0A'
             }
           });
         </script>
@@ -38,31 +38,31 @@
 
         <script>
           jq('#tumblr').inject_tumblr({
-            tumblr_id: 'scottjurek',
+            tumblr_id: 'theonlymagicleftisart',
             loading_msg: jq('#tumblr .loading'),
             data: {
-              api_key: '3VCeCOG7JTnON9cxj8euDHyLHkMdQVy3tpG289S1IND6WhAv0A'
+              api_key: '3VCeCoG7JTnON_get_your_own_key_dude_WhAv0A'
             }
           });
         </script>
 
 1. A fairly complete set of configurable parameters is below, with their defaults:
 
-        jq.fn.inject_tumblr.default_options = {¶
-          timeout: 5000,¶
-          templatize: true,¶
-          tumblr_id: 'dojo4',¶
-          loading_msg: '',¶
-          post_template: jq.fn.inject_tumblr.post_template,¶
-          down_template: jq.fn.inject_tumblr.down_template,¶
-          no_posts_template: jq.fn.inject_tumblr.no_posts_template,¶
-          post_type: 'text',¶
-          data: {¶
-            api_key: '',¶
-            tag: '',¶
-            limit: 10,¶
-            filter: ''¶
-          }¶
+        jq.fn.inject_tumblr.default_options = {
+          timeout: 5000,
+          templatize: true,
+          tumblr_id: 'theonlymagicleftisart',
+          loading_msg: '',
+          post_template: jq.fn.inject_tumblr.post_template,
+          down_template: jq.fn.inject_tumblr.down_template,
+          no_posts_template: jq.fn.inject_tumblr.no_posts_template,
+          post_type: 'text',
+          data: {
+            api_key: '',
+            tag: '',
+            limit: 10,
+            filter: ''
+          }
         }
 
 1. There are certainly bugs, since it's my first jQuery plugin. What a great opportunity for us to learn from one another!
