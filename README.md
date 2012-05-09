@@ -4,7 +4,7 @@
 
 ### Instructions and Caveats
 
-1. Get [mustache.js](https://github.com/janl/mustache.js) and inject-tumblr.js and put in your web directory.
+1. Get [mustache.js](https://github.com/janl/mustache.js) and inject_tumblr.js and put in your web directory.
 1. Include both in a script tag:
 
         <script src="/javascripts/mustache.js" type="text/javascript"></script>
