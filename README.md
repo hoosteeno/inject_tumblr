@@ -4,11 +4,11 @@
 
 ### Instructions and Caveats
 
-1) Get [mustache.js](https://github.com/janl/mustache.js) and inject-tumblr.js and put in your web directory.
-1) Include both in a script tag:
+1. Get [mustache.js](https://github.com/janl/mustache.js) and inject-tumblr.js and put in your web directory.
+1. Include both in a script tag:
     <script src="/javascripts/mustache.js" type="text/javascript"></script>
     <script src="/javascripts/inject_tumblr.js" type="text/javascript"></script>
-1) Call inject_tumblr on a set of jQuery elements:
+1. Call inject_tumblr on a set of jQuery elements:
     <script>
       jq('#tumblr').inject_tumblr({
         tumblr_id: 'theonlymagicleftisart',
@@ -17,7 +17,7 @@
         }
       });
     </script>
-1) Optional and recommended! Provide your own templates for rendering the output:
+1. Optional and recommended! Provide your own templates for rendering the output:
     <script>
       jq('#tumblr').inject_tumblr({
         tumblr_id: 'scottjurek',
@@ -28,7 +28,7 @@
         }
       });
     </script>
-1) Optional! Make a cool pinwheel graphic or prancing unicorn that will display while the plugin gets posts from Tumblr, and then vanish like magic when it has loaded:
+1. Optional! Make a cool pinwheel graphic or prancing unicorn that will display while the plugin gets posts from Tumblr, and then vanish like magic when it has loaded:
     <script>
       jq('#tumblr').inject_tumblr({
         tumblr_id: 'scottjurek',
@@ -38,7 +38,7 @@
         }
       });
     </script>
-1) A fairly complete set of configurable parameters are below, with their defaults:
+1. A fairly complete set of configurable parameters is below, with their defaults:
     jq.fn.inject_tumblr.default_options = {¶
       timeout: 5000,¶
       templatize: true,¶
@@ -55,4 +55,4 @@
         filter: ''¶
       }¶
     }
-1) There are certainly bugs, since it's my first jQuery plugin. What a great opportunity for us to learn from one another!
+1. There are certainly bugs, since it's my first jQuery plugin. What a great opportunity for us to learn from one another!
