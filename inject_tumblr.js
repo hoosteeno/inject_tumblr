@@ -20,7 +20,7 @@
       generate_error(options.down_template);
     }, options.timeout);
 
-    var get_posts = function() {
+    function get_posts() {
       jq.ajax({
         url: 'http://api.tumblr.com/v2/blog/'+options.tumblr_id+'.tumblr.com/posts',
         //crossDomain: true,
@@ -34,7 +34,7 @@
       });
     }
 
-    var enhance_post = function(post) {
+    function enhance_post(post) {
 
       post.date = new Date(parseInt(post.timestamp*1000));
       post.iso_date = post.date.toISOString();
@@ -54,8 +54,16 @@
           return jq(blurb).html();
         })();
       }
-
-      if (post.type == 'link') {
+      else if (post.type == 'photo') {
+        post.body = '<div>'+post.description+'</div>';
+        post.blurb = (function(){
+          var blurb = document.createElement('div');
+          jq(blurb).append('<img src="'+post.photos[0].alt_sizes[3].url+'" />');
+          jq(blurb).append(jq(post.body).find('p').slice(0, 2));
+          return jq(blurb).html();
+        })();
+      }
+      else {
         post.body = '<div>'+post.description+'</div>';
         post.blurb = (function(){
           var blurb = document.createElement('div');
@@ -67,7 +75,7 @@
       return post;
     }
 
-    var generate_error = function(template) {
+    function generate_error(template) {
       if (! error) {
 
         if (options.loading_msg != null) {
@@ -84,7 +92,7 @@
 
     get_posts();
 
-    var handle_response = function(result){
+    function handle_response(result){
 
       if (! error) {
 
@@ -109,7 +117,7 @@
           jq(posts).map(function() { 
             var post = this;
 
-            if (options.post_type != null && post.type != options.post_type) {
+            if (options.post_type != '' && post.type != options.post_type) {
               return null;
             }
 
@@ -143,7 +151,7 @@
     post_template: jq.fn.inject_tumblr.post_template,
     down_template: jq.fn.inject_tumblr.down_template,
     no_posts_template: jq.fn.inject_tumblr.no_posts_template,
-    post_type: 'text',
+    post_type: '',
     data: {
       api_key: '',
       tag: '',

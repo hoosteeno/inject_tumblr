@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <!-- 
+    Seriously guys don't use this code to build your application. 
+    You need to host your own js, get your own API key, buy your own Pringles. 
+  -->
+  <head>
+    <title>Inject Tumblr Sample</title>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <script src='https://raw.github.com/janl/mustache.js/master/mustache.js'></script>
+    <script src='../inject_tumblr.js'></script>
+    <script>
+      $(document).ready(function() {
+        $('#tumblr').inject_tumblr({
+          tumblr_id: 'dojo4',
+          loading_msg: '.loading',
+          data: {
+            api_key: 'PyezS3Q4Smivb24d9SzZGYSuhMNPQUhMsVetMC9ksuGPkK1BTt'
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="tumblr">
+      <h2 class="loading">The tumbls be loading...</h2>
+    </div>
+  </body>
+</html>
