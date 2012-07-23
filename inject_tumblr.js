@@ -12,7 +12,7 @@
       }
     }
 
-    options = jq.extend({}, jq.fn.inject_tumblr.default_options, options);
+    options = jq.extend(true, {}, jq.fn.inject_tumblr.default_options, options);
 
     var error = false;
 
